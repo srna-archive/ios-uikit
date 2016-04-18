@@ -15,6 +15,7 @@
 		C3371C781CC4F3630092560C /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3371C771CC4F3630092560C /* Task.swift */; };
 		C3371C7A1CC4F4450092560C /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3371C791CC4F4450092560C /* Note.swift */; };
 		C3371C7C1CC4FB100092560C /* TaskAddTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3371C7B1CC4FB100092560C /* TaskAddTVC.swift */; };
+		C3371C7E1CC502E60092560C /* NotesTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3371C7D1CC502E60092560C /* NotesTVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		C3371C771CC4F3630092560C /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		C3371C791CC4F4450092560C /* Note.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		C3371C7B1CC4FB100092560C /* TaskAddTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskAddTVC.swift; sourceTree = "<group>"; };
+		C3371C7D1CC502E60092560C /* NotesTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotesTVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 			children = (
 				C3371C741CC4DE560092560C /* TaskListTVC.swift */,
 				C3371C7B1CC4FB100092560C /* TaskAddTVC.swift */,
+				C3371C7D1CC502E60092560C /* NotesTVC.swift */,
 			);
 			name = "View Controller";
 			sourceTree = "<group>";
@@ -171,6 +174,7 @@
 				C3371C751CC4DE560092560C /* TaskListTVC.swift in Sources */,
 				C3371C7C1CC4FB100092560C /* TaskAddTVC.swift in Sources */,
 				C3371C781CC4F3630092560C /* Task.swift in Sources */,
+				C3371C7E1CC502E60092560C /* NotesTVC.swift in Sources */,
 				C3371C611CC4DC110092560C /* AppDelegate.swift in Sources */,
 				C3371C7A1CC4F4450092560C /* Note.swift in Sources */,
 			);

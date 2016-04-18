@@ -43,11 +43,11 @@ class TaskListTVC : UITableViewController, NSFetchedResultsControllerDelegate, T
                 if let navigationVC = segue.destinationViewController as? UINavigationController, taskAddVC = navigationVC.topViewController as? TaskAddTVC {
                     taskAddVC.delegate = self
                 }
-//            case Constants.NotesSegueIdentifier.rawValue:
-//                if let notesVC = segue.destinationViewController as? NotesTVC, selected = selectedTask {
-//                    notesVC.navigationItem.title = "Notes for \(selected.name)"
-//                    notesVC.task = selected
-//                }
+            case Constants.NotesSegueIdentifier.rawValue:
+                if let notesVC = segue.destinationViewController as? NotesTVC, selected = selectedTask {
+                    notesVC.navigationItem.title = "Notes for \(selected.name)"
+                    notesVC.task = selected
+                }
             default:
                 break
             }
@@ -102,7 +102,7 @@ class TaskListTVC : UITableViewController, NSFetchedResultsControllerDelegate, T
     // MARK: TaskAddDelegate
     
     func addTask(name: String, dueDate: NSDate) {
-        let newTask = Task(name: name, dueDate: dueDate, notes: [Note]())
+        let newTask = Task(name: name, dueDate: dueDate)
         
         tableView.beginUpdates()
         tableView.insertRowsAtIndexPaths([NSIndexPath(forRow: data.count, inSection: 0)], withRowAnimation: .Automatic)

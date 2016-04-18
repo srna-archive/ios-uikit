@@ -8,10 +8,15 @@
 
 import Foundation
 
-struct Task {
+class Task {
     var name : String
     var dueDate : NSDate
-    var notes : [Note]
+    var notes = [Note]()
+    
+    init(name : String, dueDate : NSDate) {
+        self.name = name
+        self.dueDate = dueDate
+    }
     
     var dueDateFormatted : String {
         let dateFormatter = NSDateFormatter()

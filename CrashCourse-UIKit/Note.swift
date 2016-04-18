@@ -8,7 +8,12 @@
 
 import Foundation
 
-struct Note {
+class Note {
     var text : String
     var task : Task
+    
+    init(text : String, task: Task) {
+        self.text = text
+        self.task = task
+    }
 }
