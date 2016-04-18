@@ -15,7 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		C3371C5D1CC4DC110092560C /* CrashCourse-UIKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CrashCourse-UIKit.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3371C5D1CC4DC110092560C /* CC UIKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CC UIKit.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3371C601CC4DC110092560C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C3371C621CC4DC110092560C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C3371C651CC4DC110092560C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -46,7 +46,7 @@
 		C3371C5E1CC4DC110092560C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C3371C5D1CC4DC110092560C /* CrashCourse-UIKit.app */,
+				C3371C5D1CC4DC110092560C /* CC UIKit.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -67,9 +67,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		C3371C5C1CC4DC110092560C /* CrashCourse-UIKit */ = {
+		C3371C5C1CC4DC110092560C /* CC UIKit */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C3371C6F1CC4DC110092560C /* Build configuration list for PBXNativeTarget "CrashCourse-UIKit" */;
+			buildConfigurationList = C3371C6F1CC4DC110092560C /* Build configuration list for PBXNativeTarget "CC UIKit" */;
 			buildPhases = (
 				C3371C591CC4DC110092560C /* Sources */,
 				C3371C5A1CC4DC110092560C /* Frameworks */,
@@ -79,9 +79,9 @@
 			);
 			dependencies = (
 			);
-			name = "CrashCourse-UIKit";
+			name = "CC UIKit";
 			productName = "CrashCourse-UIKit";
-			productReference = C3371C5D1CC4DC110092560C /* CrashCourse-UIKit.app */;
+			productReference = C3371C5D1CC4DC110092560C /* CC UIKit.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -112,7 +112,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C3371C5C1CC4DC110092560C /* CrashCourse-UIKit */,
+				C3371C5C1CC4DC110092560C /* CC UIKit */,
 			);
 		};
 /* End PBXProject section */
@@ -279,7 +279,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C3371C6F1CC4DC110092560C /* Build configuration list for PBXNativeTarget "CrashCourse-UIKit" */ = {
+		C3371C6F1CC4DC110092560C /* Build configuration list for PBXNativeTarget "CC UIKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C3371C701CC4DC110092560C /* Debug */,
