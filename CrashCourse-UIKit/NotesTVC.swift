@@ -17,10 +17,31 @@ class NotesTVC : UITableViewController {
     
     var task : Task!
     
+    @IBOutlet weak var taskImageView: UIImageView!
+    @IBOutlet weak var taskLabel: UILabel!
+    @IBOutlet weak var taskDoneSwitch: UISwitch!
+    @IBOutlet weak var taskDoneLabel: UILabel!
+    
+    func setupUI() {
+        if let imageURL = task.image, imageData = NSData(contentsOfURL:imageURL), image = UIImage(data: imageData) {
+            taskImageView.image = image
+        } else {
+            taskImageView.image = UIImage(named: "Placeholder")
+        }
+        taskLabel.text = task.name
+        taskDoneSwitch.setOn(task.done, animated: false)
+        doneChangedAction(taskDoneSwitch)
+    }
+    
+    @IBAction func doneChangedAction(sender: UISwitch) {
+        taskDoneLabel.text = sender.on ? "done" : "not done"
+    }
+    
     // MARK: View Controller Lifecycle
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
+        setupUI()
         refresh()
     }
     

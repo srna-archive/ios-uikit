@@ -45,7 +45,7 @@ class TaskListTVC : UITableViewController, NSFetchedResultsControllerDelegate, T
                 }
             case Constants.NotesSegueIdentifier.rawValue:
                 if let notesVC = segue.destinationViewController as? NotesTVC, selected = selectedTask {
-                    notesVC.navigationItem.title = "Notes for \(selected.name)"
+                    notesVC.navigationItem.title = "\(selected.name)"
                     notesVC.task = selected
                 }
             default:

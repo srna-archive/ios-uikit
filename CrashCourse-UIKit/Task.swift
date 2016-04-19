@@ -7,11 +7,15 @@
 //
 
 import Foundation
+import UIKit
 
 class Task {
     var name : String
     var dueDate : NSDate
     var notes = [Note]()
+    
+    var done = false
+    var image : NSURL?
     
     init(name : String, dueDate : NSDate) {
         self.name = name
