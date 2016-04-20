@@ -30,6 +30,8 @@ class NotesTVC : UITableViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet weak var taskDoneLabel: UILabel!
     
     func setupUI() {
+        taskImageView.clipsToBounds = true
+        taskImageView.layer.cornerRadius = 4
         if let image = task.image {
             taskImageView.image = image
         } else {
