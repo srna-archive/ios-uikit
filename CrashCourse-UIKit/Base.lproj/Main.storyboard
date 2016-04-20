@@ -73,8 +73,9 @@
                             <rect key="frame" x="0.0" y="64" width="600" height="130"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="PaJ-5k-IKC">
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="PaJ-5k-IKC">
                                     <rect key="frame" x="15" y="15" width="100" height="100"/>
+                                    <gestureRecognizers/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="100" id="1TU-gj-gta"/>
                                         <constraint firstAttribute="height" constant="100" id="All-7u-Loz"/>
@@ -98,6 +99,12 @@
                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b39-OK-Iln">
+                                    <rect key="frame" x="15" y="15" width="100" height="100"/>
+                                    <connections>
+                                        <action selector="changeImageAction:" destination="mKh-Np-6FQ" eventType="touchUpInside" id="meA-M6-ZJh"/>
+                                    </connections>
+                                </button>
                             </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <constraints>
@@ -108,8 +115,12 @@
                                 <constraint firstItem="RhM-ZX-3Gz" firstAttribute="centerX" secondItem="AGs-Gr-BQa" secondAttribute="centerX" id="Chc-oJ-OIt"/>
                                 <constraint firstAttribute="trailing" secondItem="AGs-Gr-BQa" secondAttribute="trailing" constant="15" id="Nqa-Mu-bFQ"/>
                                 <constraint firstItem="PaJ-5k-IKC" firstAttribute="top" secondItem="LOX-cR-jwP" secondAttribute="top" constant="15" id="Nst-np-B3N"/>
+                                <constraint firstItem="b39-OK-Iln" firstAttribute="centerX" secondItem="PaJ-5k-IKC" secondAttribute="centerX" id="OpL-vR-ZPT"/>
+                                <constraint firstItem="b39-OK-Iln" firstAttribute="width" secondItem="PaJ-5k-IKC" secondAttribute="width" id="Pbe-Lg-uCT"/>
                                 <constraint firstItem="AGs-Gr-BQa" firstAttribute="top" secondItem="LOX-cR-jwP" secondAttribute="top" constant="20" id="UcQ-bZ-uwn"/>
+                                <constraint firstItem="b39-OK-Iln" firstAttribute="height" secondItem="PaJ-5k-IKC" secondAttribute="height" id="W0n-N5-7l0"/>
                                 <constraint firstItem="RhM-ZX-3Gz" firstAttribute="top" secondItem="AGs-Gr-BQa" secondAttribute="bottom" constant="3" id="jMZ-ZR-igw"/>
+                                <constraint firstItem="b39-OK-Iln" firstAttribute="centerY" secondItem="PaJ-5k-IKC" secondAttribute="centerY" id="lxn-qe-Ybi"/>
                                 <constraint firstItem="PaJ-5k-IKC" firstAttribute="leading" secondItem="LOX-cR-jwP" secondAttribute="leading" constant="15" id="tUG-cz-yIx"/>
                             </constraints>
                         </view>

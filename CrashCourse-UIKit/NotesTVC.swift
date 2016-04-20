@@ -8,23 +8,35 @@
 
 import UIKit
 import CoreData
+import AssetsLibrary
 
-class NotesTVC : UITableViewController {
+class NotesTVC : UITableViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     enum Constants: String {
         case TaskCellReuseIdentifier = "NoteCell"
     }
     
     var task : Task!
-    
+    let imagePicker = UIImagePickerController()
+
     @IBOutlet weak var taskImageView: UIImageView!
     @IBOutlet weak var taskLabel: UILabel!
     @IBOutlet weak var taskDoneSwitch: UISwitch!
     @IBOutlet weak var taskDoneLabel: UILabel!
     
     func setupUI() {
-        if let imageURL = task.image, imageData = NSData(contentsOfURL:imageURL), image = UIImage(data: imageData) {
-            taskImageView.image = image
+        if let imageURL = task.image {
+            let assetsLibrary = ALAssetsLibrary()
+            assetsLibrary.assetForURL(imageURL, resultBlock: { (asset) in
+                let representation = asset.defaultRepresentation()
+                let reference = representation.fullResolutionImage().takeUnretainedValue()
+                let image = UIImage(CGImage: reference)
+                dispatch_async(dispatch_get_main_queue(), { 
+                    self.taskImageView.image = image
+                })
+                }, failureBlock: { (error) in
+                    // Do nothing
+            })
         } else {
             taskImageView.image = UIImage(named: "Placeholder")
         }
@@ -35,9 +47,23 @@ class NotesTVC : UITableViewController {
     
     @IBAction func doneChangedAction(sender: UISwitch) {
         taskDoneLabel.text = sender.on ? "done" : "not done"
+        task.done = sender.on
+    }
+
+    @IBAction func changeImageAction(sender: UIButton) {
+        imagePicker.allowsEditing = false
+        imagePicker.sourceType = .PhotoLibrary
+        
+        presentViewController(imagePicker, animated: true, completion: nil)
     }
     
+    
     // MARK: View Controller Lifecycle
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        imagePicker.delegate = self
+    }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
@@ -102,6 +128,16 @@ class NotesTVC : UITableViewController {
         }))
         alert.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: nil))
         presentViewController(alert, animated: true, completion: nil)
+    }
+
+    // MARK: UIImagePickerControllerDelegate
+    
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+        if let url = info[UIImagePickerControllerReferenceURL] as? NSURL {
+            task.image = url
+            setupUI()
+        }
+        dismissViewControllerAnimated(true, completion: nil)
     }
 }
 
