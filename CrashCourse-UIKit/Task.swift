@@ -15,7 +15,7 @@ class Task {
     var notes = [Note]()
     
     var done = false
-    var image : NSURL?
+    var image : UIImage?
     
     init(name : String, dueDate : NSDate) {
         self.name = name

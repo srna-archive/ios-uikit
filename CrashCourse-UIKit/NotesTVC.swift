@@ -17,7 +17,12 @@ class NotesTVC : UITableViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     var task : Task!
-    let imagePicker = UIImagePickerController()
+    lazy var imagePicker : UIImagePickerController = {
+        let ip = UIImagePickerController()
+        ip.allowsEditing = false
+        ip.sourceType = .PhotoLibrary
+        return ip
+    }()
 
     @IBOutlet weak var taskImageView: UIImageView!
     @IBOutlet weak var taskLabel: UILabel!
@@ -25,18 +30,8 @@ class NotesTVC : UITableViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet weak var taskDoneLabel: UILabel!
     
     func setupUI() {
-        if let imageURL = task.image {
-            let assetsLibrary = ALAssetsLibrary()
-            assetsLibrary.assetForURL(imageURL, resultBlock: { (asset) in
-                let representation = asset.defaultRepresentation()
-                let reference = representation.fullResolutionImage().takeUnretainedValue()
-                let image = UIImage(CGImage: reference)
-                dispatch_async(dispatch_get_main_queue(), { 
-                    self.taskImageView.image = image
-                })
-                }, failureBlock: { (error) in
-                    // Do nothing
-            })
+        if let image = task.image {
+            taskImageView.image = image
         } else {
             taskImageView.image = UIImage(named: "Placeholder")
         }
@@ -51,10 +46,9 @@ class NotesTVC : UITableViewController, UIImagePickerControllerDelegate, UINavig
     }
 
     @IBAction func changeImageAction(sender: UIButton) {
-        imagePicker.allowsEditing = false
-        imagePicker.sourceType = .PhotoLibrary
-        
-        presentViewController(imagePicker, animated: true, completion: nil)
+        if UIImagePickerController.isSourceTypeAvailable(.PhotoLibrary) {
+            presentViewController(imagePicker, animated: true, completion: nil)
+        }
     }
     
     
@@ -133,11 +127,11 @@ class NotesTVC : UITableViewController, UIImagePickerControllerDelegate, UINavig
     // MARK: UIImagePickerControllerDelegate
     
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
-        if let url = info[UIImagePickerControllerReferenceURL] as? NSURL {
-            task.image = url
+        if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
+            task.image = image
             setupUI()
         }
-        dismissViewControllerAnimated(true, completion: nil)
+        imagePicker.dismissViewControllerAnimated(true, completion: nil)
     }
 }
 
