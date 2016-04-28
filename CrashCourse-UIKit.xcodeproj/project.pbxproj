@@ -132,6 +132,7 @@
 				TargetAttributes = {
 					C3371C5C1CC4DC110092560C = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = YEN8RL65RP;
 					};
 				};
 			};
@@ -289,7 +290,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Tomas Srna (C2389WF6FK)";
 				INFOPLIST_FILE = "CrashCourse-UIKit/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "sk.srna.CrashCourse-UIKit";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -300,7 +303,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Tomas Srna (YEN8RL65RP)";
 				INFOPLIST_FILE = "CrashCourse-UIKit/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "sk.srna.CrashCourse-UIKit";
 				PRODUCT_NAME = "$(TARGET_NAME)";
