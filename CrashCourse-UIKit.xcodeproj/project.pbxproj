@@ -15,6 +15,15 @@
 		C3371C7A1CC4F4450092560C /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3371C791CC4F4450092560C /* Note.swift */; };
 		C3371C7C1CC4FB100092560C /* TaskAddTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3371C7B1CC4FB100092560C /* TaskAddTVC.swift */; };
 		C3371C7E1CC502E60092560C /* NotesTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3371C7D1CC502E60092560C /* NotesTVC.swift */; };
+		C3A4ED9F1CD2081A00CD3C5B /* TaskListTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3371C741CC4DE560092560C /* TaskListTVC.swift */; };
+		C3A4EDA01CD2081A00CD3C5B /* TaskAddTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3371C7B1CC4FB100092560C /* TaskAddTVC.swift */; };
+		C3A4EDA11CD2081A00CD3C5B /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3371C771CC4F3630092560C /* Task.swift */; };
+		C3A4EDA21CD2081A00CD3C5B /* NotesTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3371C7D1CC502E60092560C /* NotesTVC.swift */; };
+		C3A4EDA31CD2081A00CD3C5B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3371C601CC4DC110092560C /* AppDelegate.swift */; };
+		C3A4EDA41CD2081A00CD3C5B /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3371C791CC4F4450092560C /* Note.swift */; };
+		C3A4EDA71CD2081A00CD3C5B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3371C691CC4DC110092560C /* LaunchScreen.storyboard */; };
+		C3A4EDA81CD2081A00CD3C5B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3C5DB171CC6660B000D1D4D /* Assets.xcassets */; };
+		C3A4EDA91CD2081A00CD3C5B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C3371C641CC4DC110092560C /* Main.storyboard */; };
 		C3C5DB181CC6660B000D1D4D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C3C5DB171CC6660B000D1D4D /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
@@ -29,11 +38,20 @@
 		C3371C791CC4F4450092560C /* Note.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
 		C3371C7B1CC4FB100092560C /* TaskAddTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskAddTVC.swift; sourceTree = "<group>"; };
 		C3371C7D1CC502E60092560C /* NotesTVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotesTVC.swift; sourceTree = "<group>"; };
+		C3A4EDAD1CD2081A00CD3C5B /* CC UIKit HA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "CC UIKit HA.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3A4EDAE1CD2081A00CD3C5B /* Info HA.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Info HA.plist"; path = "/Users/tomas/Developer/STRV/CrashCourse-UIKit/Info HA.plist"; sourceTree = "<absolute>"; };
 		C3C5DB171CC6660B000D1D4D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		C3371C5A1CC4DC110092560C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C3A4EDA51CD2081A00CD3C5B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -55,6 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				C3371C5D1CC4DC110092560C /* CC UIKit.app */,
+				C3A4EDAD1CD2081A00CD3C5B /* CC UIKit HA.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -67,6 +86,7 @@
 				C3371C721CC4DE1E0092560C /* UI */,
 				C3371C601CC4DC110092560C /* AppDelegate.swift */,
 				C3371C6C1CC4DC110092560C /* Info.plist */,
+				C3A4EDAE1CD2081A00CD3C5B /* Info HA.plist */,
 			);
 			path = "CrashCourse-UIKit";
 			sourceTree = "<group>";
@@ -120,6 +140,23 @@
 			productReference = C3371C5D1CC4DC110092560C /* CC UIKit.app */;
 			productType = "com.apple.product-type.application";
 		};
+		C3A4ED9D1CD2081A00CD3C5B /* CC UIKit HA */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C3A4EDAA1CD2081A00CD3C5B /* Build configuration list for PBXNativeTarget "CC UIKit HA" */;
+			buildPhases = (
+				C3A4ED9E1CD2081A00CD3C5B /* Sources */,
+				C3A4EDA51CD2081A00CD3C5B /* Frameworks */,
+				C3A4EDA61CD2081A00CD3C5B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "CC UIKit HA";
+			productName = "CrashCourse-UIKit";
+			productReference = C3A4EDAD1CD2081A00CD3C5B /* CC UIKit HA.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -132,6 +169,9 @@
 				TargetAttributes = {
 					C3371C5C1CC4DC110092560C = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = YEN8RL65RP;
+					};
+					C3A4ED9D1CD2081A00CD3C5B = {
 						DevelopmentTeam = YEN8RL65RP;
 					};
 				};
@@ -150,6 +190,7 @@
 			projectRoot = "";
 			targets = (
 				C3371C5C1CC4DC110092560C /* CC UIKit */,
+				C3A4ED9D1CD2081A00CD3C5B /* CC UIKit HA */,
 			);
 		};
 /* End PBXProject section */
@@ -162,6 +203,16 @@
 				C3371C6B1CC4DC110092560C /* LaunchScreen.storyboard in Resources */,
 				C3C5DB181CC6660B000D1D4D /* Assets.xcassets in Resources */,
 				C3371C661CC4DC110092560C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C3A4EDA61CD2081A00CD3C5B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C3A4EDA71CD2081A00CD3C5B /* LaunchScreen.storyboard in Resources */,
+				C3A4EDA81CD2081A00CD3C5B /* Assets.xcassets in Resources */,
+				C3A4EDA91CD2081A00CD3C5B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -178,6 +229,19 @@
 				C3371C7E1CC502E60092560C /* NotesTVC.swift in Sources */,
 				C3371C611CC4DC110092560C /* AppDelegate.swift in Sources */,
 				C3371C7A1CC4F4450092560C /* Note.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C3A4ED9E1CD2081A00CD3C5B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C3A4ED9F1CD2081A00CD3C5B /* TaskListTVC.swift in Sources */,
+				C3A4EDA01CD2081A00CD3C5B /* TaskAddTVC.swift in Sources */,
+				C3A4EDA11CD2081A00CD3C5B /* Task.swift in Sources */,
+				C3A4EDA21CD2081A00CD3C5B /* NotesTVC.swift in Sources */,
+				C3A4EDA31CD2081A00CD3C5B /* AppDelegate.swift in Sources */,
+				C3A4EDA41CD2081A00CD3C5B /* Note.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,6 +376,32 @@
 			};
 			name = Release;
 		};
+		C3A4EDAB1CD2081A00CD3C5B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Tomas Srna (C2389WF6FK)";
+				INFOPLIST_FILE = "$(SRCROOT)/Info HA.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "sk.srna.CrashCourse-UIKit";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		C3A4EDAC1CD2081A00CD3C5B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Tomas Srna (C2389WF6FK)";
+				INFOPLIST_FILE = "$(SRCROOT)/Info HA.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "sk.srna.CrashCourse-UIKit";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -329,6 +419,15 @@
 			buildConfigurations = (
 				C3371C701CC4DC110092560C /* Debug */,
 				C3371C711CC4DC110092560C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C3A4EDAA1CD2081A00CD3C5B /* Build configuration list for PBXNativeTarget "CC UIKit HA" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C3A4EDAB1CD2081A00CD3C5B /* Debug */,
+				C3A4EDAC1CD2081A00CD3C5B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
